@@ -6,13 +6,13 @@ module.exports = {
              console.info(data);
         }, function(err){
             console.error(err);
-        }, "OurCodeWorldpreventscreenshots", "enable", [_settings]);
+        }, "OurCodeWorldpreventscreenshots", "enable", []);
     },
     disableScreenshots: function(){
         cordova.exec(function(data){
              console.info(data);
         }, function(err){
             console.error(err);
-        }, "OurCodeWorldpreventscreenshots", "disable", [_settings]);
+        }, "OurCodeWorldpreventscreenshots", "disable", []);
     }
 };
