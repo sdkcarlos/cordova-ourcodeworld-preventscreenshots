@@ -25,7 +25,7 @@ public class OurCodeWorldpreventscreenshots extends CordovaPlugin {
                         result.setKeepCallback(true);
                         callbacks.sendPluginResult(result);
                     }catch(Exception e){
-                        PluginResult result = new PluginResult(PluginResult.Status.ERROR, "");
+                        PluginResult result = new PluginResult(PluginResult.Status.ERROR, e.getMessage());
                         result.setKeepCallback(true);
                         callbacks.sendPluginResult(result);
                     }
@@ -43,7 +43,7 @@ public class OurCodeWorldpreventscreenshots extends CordovaPlugin {
                         result.setKeepCallback(true);
                         callbacks.sendPluginResult(result);
                     }catch(Exception e){
-                        PluginResult result = new PluginResult(PluginResult.Status.ERROR, "");
+                        PluginResult result = new PluginResult(PluginResult.Status.ERROR, e.getMessage());
                         result.setKeepCallback(true);
                         callbacks.sendPluginResult(result);
                     }

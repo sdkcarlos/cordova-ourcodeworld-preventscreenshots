@@ -35,7 +35,6 @@
             return isEnabled;
         };
 
-
         return core;
     }
 
