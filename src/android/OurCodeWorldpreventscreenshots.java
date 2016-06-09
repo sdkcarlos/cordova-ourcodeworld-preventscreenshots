@@ -12,17 +12,41 @@ public class OurCodeWorldpreventscreenshots extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+        final CallbackContext callbacks = callbackContext;
+
         if (ACTION_ENABLE.equals(action)) {
             cordova.getActivity().runOnUiThread(new Runnable() {
                 public void run() {
-                    cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-                                                               WindowManager.LayoutParams.FLAG_SECURE);
+                    try{
+                        // Allow to make screenshots removing the FLAG_SECURE
+                        cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
+
+                        PluginResult result = new PluginResult(PluginResult.Status.OK, "");
+                        result.setKeepCallback(true);
+                        callbacks.sendPluginResult(result);
+                    }catch(Exception e){
+                        PluginResult result = new PluginResult(PluginResult.Status.ERROR, "");
+                        result.setKeepCallback(true);
+                        callbacks.sendPluginResult(result);
+                    }
                 }
             });
         }else if(ACTION_DISABLE.equals(action)){
             cordova.getActivity().runOnUiThread(new Runnable() {
                 public void run() {
-                    cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
+                    try{
+                        // Disable the creation of screenshots adding the FLAG_SECURE to the window
+                        cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                                                                   WindowManager.LayoutParams.FLAG_SECURE);
+
+                        PluginResult result = new PluginResult(PluginResult.Status.OK, "");
+                        result.setKeepCallback(true);
+                        callbacks.sendPluginResult(result);
+                    }catch(Exception e){
+                        PluginResult result = new PluginResult(PluginResult.Status.ERROR, "");
+                        result.setKeepCallback(true);
+                        callbacks.sendPluginResult(result);
+                    }
                 }
             });
         }
