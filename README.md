@@ -1,0 +1,2 @@
+# cordova-ourcodeworld-preventscreenshots
+Disable
