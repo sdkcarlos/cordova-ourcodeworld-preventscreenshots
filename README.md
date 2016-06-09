@@ -1,7 +1,10 @@
 # Cordova Our Code World Prevent screenshots for android
 
-# Do not use, doesn't work yet
+# The plugin is ready for deployment
+
+Add it to your project using
 
 ```batch
 cordova plugin add https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git
 ```
+# Visit the homepage for more information
