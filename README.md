@@ -7,4 +7,5 @@ Add it to your project using
 ```batch
 cordova plugin add https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git
 ```
-# Visit the homepage for more information
+
+# [Visit the homepage for more information](https://sdkcarlos.github.io/sites/cordova-disablescreenshots.html)
