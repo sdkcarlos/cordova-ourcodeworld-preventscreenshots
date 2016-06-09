@@ -22,8 +22,7 @@ public class OurCodeWorldpreventscreenshots extends CordovaPlugin {
         }else if(ACTION_DISABLE.equals(action)){
             cordova.getActivity().runOnUiThread(new Runnable() {
                 public void run() {
-                    cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE,
-                                                                 WindowManager.LayoutParams.FLAG_SECURE);
+                    cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
                 }
             });
         }
