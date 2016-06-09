@@ -2,7 +2,7 @@
 (function(module){
     function PreventScreenshots(){
         var core = {};
-        var isEnabled = false;
+        var isEnabled = true;
 
         var callFunctionIfExists = function(fn,params){
             if(typeof(fn) !== "function"){
