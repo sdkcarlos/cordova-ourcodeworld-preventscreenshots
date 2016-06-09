@@ -19,8 +19,10 @@ public class OurCodeWorldpreventscreenshots extends CordovaPlugin {
                 public void run() {
                     try{
                         // Allow to make screenshots removing the FLAG_SECURE
-                        cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
-
+                        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
+                            cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
+                        }
+                        
                         PluginResult result = new PluginResult(PluginResult.Status.OK, "");
                         result.setKeepCallback(true);
                         callbacks.sendPluginResult(result);
@@ -36,8 +38,10 @@ public class OurCodeWorldpreventscreenshots extends CordovaPlugin {
                 public void run() {
                     try{
                         // Disable the creation of screenshots adding the FLAG_SECURE to the window
-                        cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-                                                                   WindowManager.LayoutParams.FLAG_SECURE);
+                        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
+                            cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                                                                       WindowManager.LayoutParams.FLAG_SECURE);
+                        }
 
                         PluginResult result = new PluginResult(PluginResult.Status.OK, "");
                         result.setKeepCallback(true);
