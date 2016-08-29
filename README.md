@@ -8,4 +8,4 @@ Add it to your project using
 cordova plugin add https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git
 ```
 
-# [Visit the homepage for more information](https://sdkcarlos.github.io/sites/cordova-disablescreenshots.html)
+# [Visit the homepage for more information](https://sdkcarlos.github.io/sites/cordova/disable-screenshots.html)
