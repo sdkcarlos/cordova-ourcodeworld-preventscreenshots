@@ -1,0 +1,23 @@
+{
+  "name": "cordova-ourcodeworld-preventscreenshots",
+  "version": "1.0.0",
+  "description": "A free cordova plugin for the android platform to disable screenshots in your application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots.git"
+  },
+  "keywords": [
+    "android",
+    "cordova"
+  ],
+  "author": "Our Code World",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots/issues"
+  },
+  "homepage": "https://github.com/sdkcarlos/cordova-ourcodeworld-preventscreenshots#readme"
+}
